@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="icon" href="./src/IMG_3417.ico" />
+    <title>BlackJack - LKPLIB VER</title>
+  </head>
+  <body>
+    <img
+      src="./src/IMG_3417.JPG"
+      alt="Fung's Like"
+      width="100vh"
+      height="100vh"
+    />
+    <h1>21點 - 呂中特別版</h1>
+    <h2>張豐愛你 -認識21點便是贏錢的開端</h2>
+    <b style="color: blue">適可而止，時刻自律 戒賭熱綫:1834 633</b>
+    <div id="gameOutput"></div>
+    <button id="hitButton">Hit</button>
+    <button id="standButton">Stand</button>
+    <button type="button" onclick="window.location.reload()">reload</button
+    ><br />
+    <script>
+      (function () {
+        const oldLog = console.log;
+        console.log = function (message) {
+          oldLog.apply(console, arguments);
+          const output = document.getElementById("gameOutput");
+          output.innerHTML += message + "<br>";
+        };
+      })();
+    </script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
